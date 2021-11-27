@@ -1,7 +1,7 @@
 export default ({ children }) => (
     <>
         <header>
-            <div>
+            <div className="header-container">
                 <div>
                     <a href="#">
                         <img src="~/icon.png" className=".logo" />
