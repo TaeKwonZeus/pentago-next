@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/icon.svg';
+import { NextPage } from 'next';
 
-export default ({ children }) => (
+const Layout: NextPage = ({ children }) => (
     <>
         <header>
             <div className="header-container">
@@ -14,6 +15,7 @@ export default ({ children }) => (
                                     src={logo}
                                     height="40"
                                     width="40"
+                                    alt="Homepage"
                                 ></Image>
                             </div>
                         </a>
@@ -45,3 +47,5 @@ export default ({ children }) => (
         </footer>
     </>
 );
+
+export default Layout;

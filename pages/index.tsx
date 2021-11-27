@@ -1,6 +1,7 @@
+import { NextPage } from 'next';
 import styles from '../styles/Home.module.css';
 
-export default () => (
+const Home: NextPage = () => (
     <div className={styles.container}>
         <h1>Welcome to pentago.org!</h1>
         <div className={styles.links}>
@@ -16,3 +17,5 @@ export default () => (
         </div>
     </div>
 );
+
+export default Home;
