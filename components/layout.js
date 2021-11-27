@@ -1,10 +1,16 @@
+import Link from 'next/link';
+import icon from '../public/vercel.svg';
+
 export default ({ children }) => (
     <>
         <header>
             <div className="header-container">
                 <div>
                     <a href="#">
-                        <img src="~/icon.png" className=".logo" />
+                        <img
+                            src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Codepen-512.png"
+                            className="header-logo"
+                        />
                     </a>
                     <nav className="header-navbar">
                         <Link href="/">
