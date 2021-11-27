@@ -1,33 +1,39 @@
 import Link from 'next/link';
-import icon from '../public/vercel.svg';
+import Image from 'next/image';
+import logo from '../public/icon.svg';
 
 export default ({ children }) => (
     <>
         <header>
             <div className="header-container">
                 <div>
-                    <a href="#">
-                        <img
-                            src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Codepen-512.png"
-                            className="header-logo"
-                        />
-                    </a>
+                    <Link href="/">
+                        <a>
+                            <div className="header-logo">
+                                <Image
+                                    src={logo}
+                                    height="40"
+                                    width="40"
+                                ></Image>
+                            </div>
+                        </a>
+                    </Link>
                     <nav className="header-navbar">
                         <Link href="/">
-                            <a className=".hover-highlight">Home</a>
+                            <a className="hover-highlight">Home</a>
                         </Link>
                         <Link href="/play">
-                            <a className=".hover-highlight">Play</a>
+                            <a className="hover-highlight">Play</a>
                         </Link>
                     </nav>
                 </div>
                 <div>
                     <nav className="header-navbar">
                         <Link href="/register">
-                            <a className=".hover-highlight">Register</a>
+                            <a className="hover-highlight">Register</a>
                         </Link>
                         <Link href="/login">
-                            <a className=".hover-highlight">Login</a>
+                            <a className="hover-highlight">Login</a>
                         </Link>
                     </nav>
                 </div>
