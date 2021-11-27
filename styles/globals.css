@@ -1,16 +1,71 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+/* Commons */
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, Cantarell, Roboto, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+main {
+    padding: 0 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #e6e7e8;
+    font-size: 20px;
+    border-top: 1px solid lightgray;
+}
+
+footer div {
+    padding: 30px;
+}
+
+.hover-highlight:hover {
+    background-color: lightgray;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid lightgray;
+    color: black;
+}
+
+.header-container div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-navbar a {
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.header-link {
+    display: inline-block;
+}
+
+.header-logo {
+    display: block;
+    height: 40px;
+    padding: 10px;
 }
