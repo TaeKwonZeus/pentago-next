@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => (
@@ -6,13 +7,19 @@ const Home: NextPage = () => (
         <h1>Welcome to pentago.org!</h1>
         <div className={styles.links}>
             <div>
-                <a href="/play">Play</a>
+                <Link href="/play">
+                    <a>Play</a>
+                </Link>
             </div>
             <div>
-                <a href="#">Test 1</a>
+                <Link href="/">
+                    <a>Test 1</a>
+                </Link>
             </div>
             <div>
-                <a href="#">Test 2</a>
+                <Link href="/">
+                    <a>Test 2</a>
+                </Link>
             </div>
         </div>
     </div>
