@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/icon.svg';
 import { NextPage } from 'next';
+import LoginPartial from './loginPartial';
 
 const Layout: NextPage = ({ children }) => (
     <>
@@ -30,14 +31,7 @@ const Layout: NextPage = ({ children }) => (
                     </nav>
                 </div>
                 <div>
-                    <nav className="header-navbar">
-                        <Link href="/register">
-                            <a className="hover-highlight">Register</a>
-                        </Link>
-                        <Link href="/login">
-                            <a className="hover-highlight">Login</a>
-                        </Link>
-                    </nav>
+                    <LoginPartial />
                 </div>
             </div>
         </header>

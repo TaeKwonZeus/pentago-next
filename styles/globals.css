@@ -55,7 +55,9 @@ footer div {
     align-items: center;
 }
 
-.header-navbar a {
+.header-navbar a,
+span {
+    cursor: pointer;
     font-size: 20px;
     padding: 20px 10px;
 }
