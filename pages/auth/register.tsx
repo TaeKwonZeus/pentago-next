@@ -9,23 +9,21 @@ const Register: NextPage = () => {
     };
 
     return (
-        <>
-            <form onSubmit={registerUser}>
-                <div>
-                    <label htmlFor="username">Username</label>
-                    <input name="username" type="text" required />
-                </div>
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input name="email" type="text" required />
-                </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input name="password" required />
-                </div>
-                <button type="submit">Register</button>
-            </form>
-        </>
+        <form onSubmit={registerUser}>
+            <div>
+                <label htmlFor="username">Username</label>
+                <input name="username" type="text" required />
+            </div>
+            <div>
+                <label htmlFor="email">Email</label>
+                <input name="email" type="text" required />
+            </div>
+            <div>
+                <label htmlFor="password">Password</label>
+                <input name="password" required />
+            </div>
+            <button type="submit">Register</button>
+        </form>
     );
 };
 
