@@ -29,7 +29,7 @@ const Register: NextPage = () => {
 
         const errorCode = res.status;
 
-        if (errorCode == 409) {
+        if (errorCode === 409) {
             setExistsError(
                 'Account with this username or email already exists'
             );
