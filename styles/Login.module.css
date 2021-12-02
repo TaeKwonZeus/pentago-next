@@ -7,11 +7,15 @@
 }
 
 .container form {
-  width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
 .container div {
   margin: 15px 0;
+  width: 420px;
 }
 
 .container input {
