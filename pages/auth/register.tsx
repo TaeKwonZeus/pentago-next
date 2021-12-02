@@ -1,12 +1,42 @@
 import { NextPage } from 'next';
-import { FormEvent } from 'react';
+import { useRouter } from 'next/dist/client/router';
+import { FormEvent, useState } from 'react';
+import config from '../../config';
 import styles from '../../styles/Login.module.css';
 
 const Register: NextPage = () => {
-    const registerUser = (event: FormEvent) => {
+    const [existsError, setExistsError] = useState('');
+    const router = useRouter();
+
+    const registerUser = async (event: FormEvent) => {
         event.preventDefault();
 
         const username: string = event.target[0].value;
+        const email: string = event.target[1].value;
+        const password: string = event.target[1].value;
+
+        const res = await fetch(`${config.apiURL}/auth/register`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username,
+                email,
+                password,
+            }),
+        });
+
+        const errorCode = res.status;
+
+        if (errorCode == 409) {
+            setExistsError(
+                'Account with this username or email already exists'
+            );
+            return;
+        }
+
+        router.push('/');
     };
 
     return (
@@ -30,6 +60,7 @@ const Register: NextPage = () => {
                         Register
                     </button>
                 </div>
+                <div>{existsError}</div>
             </form>
         </div>
     );
