@@ -32,3 +32,9 @@
 .links div a:hover {
   background-color: lightgray;
 }
+
+@supports (transition: initial) {
+  .links div a {
+    transition: background-color 0.2s linear;
+  }
+}

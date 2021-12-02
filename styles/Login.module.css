@@ -42,3 +42,9 @@
 .submitButton:hover {
   background-color: lightgray;
 }
+
+@supports (transition: initial) {
+  .submitButton {
+    transition: background-color 0.2s linear;
+  }
+}

@@ -34,6 +34,12 @@ footer div {
   background-color: lightgray;
 }
 
+@supports (transition: initial) {
+  .hover-highlight {
+    transition: background-color 0.2s linear;
+  }
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
