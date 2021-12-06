@@ -6,8 +6,10 @@ interface LoginRequestBody {
   password: string;
 }
 
-const Login: NextApiHandler = (req, res) => {
+const Login: NextApiHandler = async (req, res) => {
   const body: LoginRequestBody = req.body;
+
+  res.status(200);
 };
 
 export default withSession(Login);

@@ -1,9 +1,12 @@
 import { NextPage } from 'next';
+import { useRouter } from 'next/dist/client/router';
 import { FormEvent } from 'react';
 import styles from '../../styles/Login.module.css';
 import { LoginRequestBody } from '../api/auth/login';
 
 const Login: NextPage = () => {
+  const router = useRouter();
+
   const loginUser = async (event: FormEvent) => {
     event.preventDefault();
 
@@ -20,6 +23,8 @@ const Login: NextPage = () => {
         password: password,
       } as LoginRequestBody),
     });
+
+    router.push('/');
   };
 
   return (
