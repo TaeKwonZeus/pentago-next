@@ -9,7 +9,7 @@ interface LoginRequestBody {
 const Login: NextApiHandler = async (req, res) => {
   const body: LoginRequestBody = req.body;
 
-  res.status(200);
+  res.status(200).end();
 };
 
 export default withSession(Login);
