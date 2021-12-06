@@ -13,7 +13,7 @@ const Register: NextPage = () => {
 
     const username: string = event.target[0].value;
     const email: string = event.target[1].value;
-    const password: string = event.target[1].value;
+    const password: string = event.target[2].value;
 
     const res = await fetch(`${config.apiURL}/auth/register`, {
       method: 'POST',
@@ -51,7 +51,7 @@ const Register: NextPage = () => {
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input name="password" required />
+          <input name="password" type="password" required />
         </div>
         <div className={styles.buttonWrapper}>
           <button type="submit" className={styles.submitButton}>

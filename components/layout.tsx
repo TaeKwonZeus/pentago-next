@@ -30,7 +30,7 @@ const Layout: NextPage = ({ children }) => (
               <a className="hover-highlight">Register</a>
             </Link>
             <Link href="/auth/login">
-              <a className="hover-highlight">Login</a>
+              <a className="hover-highlight">Log In</a>
             </Link>
           </nav>
         </div>
