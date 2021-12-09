@@ -34,7 +34,7 @@ const Register: NextPage = () => {
       return;
     }
 
-    router.push('/');
+    await router.push('/');
   };
 
   return (

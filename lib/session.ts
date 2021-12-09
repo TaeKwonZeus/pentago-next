@@ -7,7 +7,7 @@ const withSession = (handler: NextApiHandler) =>
     cookieName: 'my-cookie',
     cookieOptions: {
       maxAge: 60 * 60 * 24 * 30,
-      secure: process.env.NODE_ENV === 'production' ? true : false,
+      secure: process.env.NODE_ENV === 'production',
     },
   });
 

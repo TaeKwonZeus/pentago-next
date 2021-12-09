@@ -11,7 +11,7 @@ const Layout: NextPage = ({ children }) => (
           <Link href="/">
             <a>
               <div className="header-logo">
-                <Image src={logo} height="40" width="40" alt="Homepage"></Image>
+                <Image src={logo} height="40" width="40" alt="Homepage" />
               </div>
             </a>
           </Link>
