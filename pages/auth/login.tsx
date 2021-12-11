@@ -1,10 +1,11 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 import styles from '../../styles/Login.module.css';
 import { LoginRequestBody } from '../api/auth/login';
 
 const Login: NextPage = () => {
+  const [errorMessage, setErrorMessage] = useState('');
   const router = useRouter();
 
   const loginUser = async (event: FormEvent) => {
@@ -13,7 +14,7 @@ const Login: NextPage = () => {
     const usernameOrEmail = event.target[0].value;
     const password = event.target[1].value;
 
-    await fetch('/api/auth/login', {
+    const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,6 +24,11 @@ const Login: NextPage = () => {
         password: password,
       } as LoginRequestBody),
     });
+
+    if (res.status === 404) {
+      setErrorMessage('Invalid credentials');
+      return;
+    }
 
     await router.push('/');
   };
@@ -44,6 +50,7 @@ const Login: NextPage = () => {
             Log In
           </button>
         </div>
+        <div>{errorMessage}</div>
       </form>
     </div>
   );
